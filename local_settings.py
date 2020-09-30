@@ -18,4 +18,4 @@ MEDIA_URL = 'http://127.0.0.1:8000/media/'
 # MEDIA_URL = 'http://13.124.252.168:8000/media/'
 MEDIA_ROOT = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'media/')
 
-# STATIC_URL = '/api/static/'
+STATIC_URL = '/static/'
