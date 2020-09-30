@@ -153,8 +153,8 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://127.0.0.1:3000',
     'http://localhost:8000',    #Django 도메인
-    'http://15.164.48.222',
-    'http://15.164.48.222:80'
+    'http://52.78.44.143',
+    'http://52.78.44.143:8000'
 )
 
 

@@ -50,7 +50,7 @@ class UserSignInView(views.View):
 
         data = json.loads(request.body)
 
-        user = User.objects.filter(email=data['email']).first()
+        user = User.objects.filter(username=data['username']).first()
         if not user:
             return JsonResponse(data={
                 'code': 'NotLogin',

@@ -7,7 +7,11 @@ from service.models import *
 @admin.register(User)
 class UserAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
-        (None, {'fields': ('nickname', 'phone_number')}),
+        # (None, {'fields': ('nickname', 'phone_number')}),
+        (None, {'fields': ('nickname', )}),
     )
-    list_display = ('nickname', 'phone_number', 'email')
-    search_fields = ('nickname', 'phone_number', 'email')
+    list_display = ('nickname',)
+    search_fields = ('nickname',)
+
+    # list_display = ('nickname', 'phone_number', 'email')
+    # search_fields = ('nickname', 'phone_number', 'email')
