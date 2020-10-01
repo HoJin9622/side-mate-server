@@ -45,7 +45,7 @@ class UserSignUpView(views.APIView):
         user = User.objects.create(
             username=data['username'], nickname=data['nickname'],
         )
-        user.set_password(self.data['password'])
+        user.set_password(data['password'])
         user.save()
         login(request, user)
 
