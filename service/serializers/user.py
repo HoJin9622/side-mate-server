@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from service.exceptions import ValidationError
+from service.exceptions import ValidationError, ConflictError
 from service.models import *
 from service.serializers import *
-from datetime import date
+
 
 
 class UserAuthSerializer(serializers.Serializer):
@@ -14,11 +14,11 @@ class UserAuthSerializer(serializers.Serializer):
 
     def signup(self):
         if User.objects.filter(username=self.data['username']).exists():
-            raise ValidationError({'username': '이미 존재하는 아이디입니다.'})
+            raise ConflictError({'username': '이미 존재하는 아이디입니다.'})
         # if User.objects.filter(phone_number=self.data['phone_number']).exists():
         #     raise ValidationError({'phone_number': '이미 사용 중인 전화번호입니다.'})
         if User.objects.filter(nickname=self.data['nickname']).exists():
-            raise ValidationError({'nickname': '이미 사용 중인 닉네임입니다.\n다른 닉네임을 입력해주세요.'})
+            raise ConflictError({'nickname': '이미 사용 중인 닉네임입니다.\n다른 닉네임을 입력해주세요.'})
 
         user = User.objects.create(
             username=self.data['username'], nickname=self.data['nickname'],
