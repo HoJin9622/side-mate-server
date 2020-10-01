@@ -152,7 +152,9 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',  # React local port
     'http://localhost:8000',  # Django local post
     'http://52.78.44.143',
-    'http://52.78.44.143:8000'
+    'http://52.78.44.143:8000',
+    'http://www.side-mate.com',
+    'http://www.side-mate.com:8000',
 )
 
 
