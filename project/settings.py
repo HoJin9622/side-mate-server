@@ -149,10 +149,8 @@ CORS_ALLOW_METHODS = (
 )
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost',    #React 도메인
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'http://localhost:8000',    #Django 도메인
+    'http://localhost:3000',  # React local port
+    'http://localhost:8000',  # Django local post
     'http://52.78.44.143',
     'http://52.78.44.143:8000'
 )
