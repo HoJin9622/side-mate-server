@@ -10,8 +10,8 @@ class UserAdmin(UserAdmin):
         # (None, {'fields': ('nickname', 'phone_number')}),
         (None, {'fields': ('nickname', )}),
     )
-    list_display = ('nickname',)
-    search_fields = ('nickname',)
+    list_display = ('username', 'nickname',)
+    search_fields = ('username', 'nickname',)
 
     # list_display = ('nickname', 'phone_number', 'email')
     # search_fields = ('nickname', 'phone_number', 'email')
