@@ -74,12 +74,12 @@ class UserSignInView(views.View):
             return JsonResponse(data={
                 'code': 'NotLogin',
                 'msg': '사용자를 찾을 수 없습니다'
-            })
+            }, status=400)
         elif not user.check_password(data['password']):
             return JsonResponse(data={
                 'code': 'NotLogin',
                 'msg': '올바른 비밀번호를 입력해주세요'
-            })
+            }, status=400)
         login(request, user)
         return JsonResponse({'code': 'OK'})
 
