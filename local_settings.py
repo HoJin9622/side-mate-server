@@ -13,9 +13,12 @@ DATABASES = {
 ALLOWED_HOSTS = ['*']
 INTERNAL_IPS = ['127.0.0.1']
 
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
-MEDIA_URL = 'http://127.0.0.1:8000/media/'
+
+
 # MEDIA_URL = 'http://13.124.252.168:8000/media/'
 MEDIA_ROOT = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'media/')
+MEDIA_URL = '/media/'
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 STATIC_URL = '/static/'

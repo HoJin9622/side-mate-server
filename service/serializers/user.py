@@ -5,7 +5,6 @@ from service.models import *
 from service.serializers import *
 
 
-
 class UserAuthSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField()
@@ -50,6 +49,8 @@ class UserProfileSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'nickname',
+            'position',
+            'profile_image',
             # 'email',
             # 'phone_number',
         )
