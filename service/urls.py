@@ -4,6 +4,8 @@ from rest_framework import routers
 from service.views import v1
 
 router = routers.DefaultRouter()
+router.register('regions', v1.RegionViewSet)
+router.register('posts', v1.PostViewSet)
 
 urlpatterns = [
     path('v1/', include(router.urls)),
